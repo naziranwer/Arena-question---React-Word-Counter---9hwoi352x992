@@ -42,9 +42,9 @@ const App = () => {
       <div id="word-counter">{wordl} </div>
       <br />
       <div id="char-counter">{charl}</div><br/>
-      <label htmlFor="range">Font Size Picker</label>
+      <label htmlFor="fontSize-input">Font Size Picker</label>
       <input
-        id="range"
+        id="fontSize-input"
         type="range"
         value={font}
         min={16}
