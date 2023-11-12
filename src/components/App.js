@@ -12,10 +12,10 @@ const App = () => {
 
     setInput(InputString);
 
-    if (InputString.length > limit) {
+    if (InputString.length > limit-1) {
       e.target.value = InputString.slice(0, limit);
     }
-    setCharl(InputString.length);
+    setCharl(e.target.value.length);
 
     const words = InputString.split(/\s+/).filter((word) => word !== "");
     const wordCount = words.length;
@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div id="main">
       
-      <label htmlFor="char-limit-input">Word Limit</label>
+      <label htmlFor="char-limit-input">Char Limit</label>
       <input
         id="char-limit-input"
         value={limit}
